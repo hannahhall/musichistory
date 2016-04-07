@@ -9,7 +9,7 @@
 
 <body>
 	<div >
-		<nav id="navBar">
+		<nav id="navBar" class="navBar">
 			<ul>
 				<li><a href="#" title="">View Music</a></li>
 				<li><a href="#" title="">Add Music</a></li>
@@ -18,6 +18,32 @@
 		</nav>
 	</div>
 	<div class="sideBar">
+		<label for="length" class="label">Song Length
+  		<input type="range" id="length" min="0.5" max="10" step="0.5" value="5">
+  	</label>
+
+  	<label class="label">Artist Name
+	  	<input name="artist" list="artistName">
+	    <datalist id="artistName">
+		    <option value="The Rolling Stones">
+		    <option value="The Beatles">
+		    <option value="The Wild Feather">
+		    <option value="Butch Walker">
+		    <option value="Frank Turner">
+		    <option value="Brandi Carlile">
+		    <option value="Courtney Barnett">
+		    <option value="Gin Wigmore">
+	    </datalist>
+    </label>
+
+    <label class="label">Genre
+    	<input type="checkbox" name="rock" value="rock">Rock
+    	<input type="checkbox" name="pop" value="pop">Pop
+    	<input type="checkbox" name="classical" value="classical">Classical
+    	<input type="checkbox" name="jazz" value="jazz">Jazz
+    	<input type="checkbox" name="blues" value="blues">Blues
+    	<input type="checkbox" name="hipHop" value="hipHop">Hip Hop
+  	</label>
 
 
 	</div>
