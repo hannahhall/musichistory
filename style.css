@@ -27,7 +27,7 @@
 .navBar li {
 	text-align: right;
 	list-style-type: none;
-	margin-left: 15px;
+	margin: 15px;
 	padding: 3px 10px;
 	display: inline;
 	border: 2px solid #080357;;
@@ -51,16 +51,20 @@ a:visited {
 	padding: 5px;
 	margin: 5px;
 	background-color: #8CD867;
+	height: 300px;
+	width:30%;
 }
 
 .label {
 	display: block;
-	margin: 0;
+	margin: 15px;
 
 }
 
+
 .genre div {
 	padding-left: 10px;
+	padding-top:5px;
 }
 
 
