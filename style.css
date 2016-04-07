@@ -1,18 +1,15 @@
 * {
 	font-family: sans-serif;
+	color: #080357;
 }
-
-div {
-	border: 2px solid black;
-	max-width: 100%
-}
-
 /*Header Decorations STOP TOUCHING IT ITS FINE*/
 .topBar {
 	margin: 5px;
 	padding: 10px 20px;
 	background-color: #FF9F1C;
 	color: #080357;
+	border: 2px solid #080357;
+	border-radius: 10px;
 }
 .header {
 	font-size: 3em;
@@ -33,7 +30,7 @@ div {
 	margin-left: 15px;
 	padding: 3px 10px;
 	display: inline;
-	border: 2px solid black;
+	border: 2px solid #080357;;
 	border-radius: 10px;
 
 }
@@ -44,6 +41,121 @@ a:link {
 a:visited {
 	color: #080357;
 }
+
+/*Side Bar */
+
+.sideBar {
+	float: left;
+	border: 2px solid #080357;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 5px;
+	background-color: #8CD867;
+}
+
+.label {
+	display: block;
+	margin: 0;
+
+}
+
+.genre div {
+	padding-left: 10px;
+}
+
+
+
+.label input {
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Song List*/
+
+.songList {
+	float: right;
+	border: 2px solid #080357;
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
