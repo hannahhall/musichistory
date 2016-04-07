@@ -1,5 +1,18 @@
+* {
+	font-family: sans-serif;
+}
+
 div {
 	border: 2px solid black;
+	max-width: 100%
+}
+
+/*Header Decorations STOP TOUCHING IT ITS FINE*/
+.topBar {
+	margin: 5px;
+	padding: 10px 20px;
+	background-color: #FF9F1C;
+	color: #080357;
 }
 .header {
 	font-size: 3em;
@@ -10,16 +23,31 @@ div {
 
 }
 .navBar ul {
-	padding-left: 70%;
-	padding-right: 0;
-	margin: 0;
+	margin: 0 0 0 65%;
+	padding: 0;
 
 }
 .navBar li {
 	text-align: right;
 	list-style-type: none;
-	padding: 3.75%;
+	margin-left: 15px;
+	padding: 3px 10px;
 	display: inline;
-
+	border: 2px solid black;
+	border-radius: 10px;
 
 }
+a:link {
+	text-decoration: none;
+	color: #8CD867;
+}
+a:visited {
+	color: #080357;
+}
+
+
+
+
+
+
+
