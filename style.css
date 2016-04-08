@@ -5,7 +5,7 @@
 /*Header Decorations STOP TOUCHING IT ITS FINE*/
 .topBar {
 	margin: 5px;
-	padding: 10px 20px;
+	padding: 10px 15px;
 	background-color: #FF9F1C;
 	color: #080357;
 	border: 2px solid #080357;
@@ -22,12 +22,13 @@
 .navBar ul {
 	margin: 0 0 0 65%;
 	padding: 0;
+	text-align: right;
 
 }
 .navBar li {
 	text-align: right;
 	list-style-type: none;
-	margin: 15px;
+	margin: 10px;
 	padding: 3px 10px;
 	display: inline;
 	border: 2px solid #080357;;
@@ -64,10 +65,10 @@ a:visited {
 }
 
 
-.genre div {
+/*.genre div {
 	padding-left: 10px;
 	padding-top:5px;
-}
+}*/
 
 
 
@@ -86,8 +87,24 @@ a:visited {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 0 50%;
+}
 
+.buttonHold {
+	text-align: center;
+	clear: both;
+}
+
+.secLeft {
+	float: left;
+}
+
+.secRight {
+	float: right;
+}
+
+.secRight,
+.secLeft {
+	margin: 20px;
 }
 
 /*Song List*/
