@@ -1,5 +1,5 @@
 var songs = [];
-var input = document.getElementById("songList");
+var input = $("#songList");
 
 songs[songs.length] = "Happy > by The Rolling Stones on the album Exile on Main St";
 songs[songs.length] = "Tumbling Dice > by The Rolling Stones on the album Exile on Main St";
@@ -15,7 +15,11 @@ for (let i=0; i<songs.length; i++) {
 }
 
 for (let i=0; i<songs.length; i++) {
-	var inputInfo = `<p> ${songs[i]}</p>`;
-	input.innerHTML += inputInfo;
+	domInput(songs[i]);
+
+}
+function domInput (song) {
+var inputInfo = `<p>${song}</p>`;
+	input.append(inputInfo);
 }
 
