@@ -1,85 +1,72 @@
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="normalize.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Music History</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Music History</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 	<div class="topBar">
-		<header id="header" class="header">
-			Music History
-		</header>
 		<nav id="navBar" class="navBar">
 			<ul>
-				<li><a href="#" title="">View Music</a></li>
-				<li><a href="#" title="">Add Music</a></li>
-				<li><a href="#" title="">Profile</a></li>
+				<li class="link"><a class="selected" href="#" title="" id="viewLink">View Music</a></li>
+				<li class="link"><a href="#" title="" id="addLink">Add Music</a></li>
 			</ul>
 		</nav>
 	</div>
-	<div class="sideBar">
-		<label for="length" class="label">Song Length
-  		<input type="range" id="length" min="0.5" max="10" step="0.5" value="5">
-  	</label>
+	<div id="viewMusic">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3 sideSection">
+					<label for="length" class="labels">Song Length</label>
+					<input type="range" id="length" min="0.5" max="10" step="0.5" value="5">
 
+					<label class="labels">Artist Name</label>
+					<input name="artist" list="artistName" class="artistName">
 
-  	<label class="label">Artist Name
-  	<input name="artist" list="artistName" class="aN"></label>
-    <datalist id="artistName">
-	    <option value="The Rolling Stones">
-	    <option value="The Beatles">
-	    <option value="The Wild Feather">
-	    <option value="Butch Walker">
-	    <option value="Frank Turner">
-	    <option value="Brandi Carlile">
-	    <option value="Courtney Barnett">
-	    <option value="Gin Wigmore">
-    </datalist>
+					<label for="albumName" class="labels">Album Name</label>
+					<input name="album" list="albumName">
 
+					<label class="labels genre" for="">Genre</label>
+						<input type="checkbox" name="rock" value="rock">Rock
+						<input type="checkbox" name="pop" value="pop">Pop
+						<input type="checkbox" name="classical" value="classical">Classical
+						<input type="checkbox" name="jazz" value="jazz">Jazz
+						<input type="checkbox" name="blues" value="blues">Blues
+						<input type="checkbox" name="hipHop" value="hipHop">Hip Hop
 
-    <label class="label">Album Name
-	  	<input name="album" list="albumName">
-	    <datalist id="albumName">
-		    <option value="Album Name1">
-		    <option value="Album Name2">
-		    <option value="Album Name3">
-		    <option value="Album Name4">
-		    <option value="Album Name5">
-		    <option value="Album Name6">
-		    <option value="Album Name7">
-		    <option value="Album Name8">
-	    </datalist>
-    </label>
+					<div><button type="button" class="button">Filter</button></div>
+				</div>
+				<div id="songList" class="songList col-md-9"></div>
 
-    <label class="label genre">Genre
-    	<section class="secLeft">
-    		<div><input type="checkbox" name="rock" value="rock">Rock</div>
-    		<div><input type="checkbox" name="pop" value="pop">Pop</div>
-    		<div><input type="checkbox" name="classical" value="classical">Classical</div>
-    	</section>
-    	<section class="secRight">
-    		<div><input type="checkbox" name="jazz" value="jazz">Jazz</div>
-    		<div><input type="checkbox" name="blues" value="blues">Blues</div>
-    		<div><input type="checkbox" name="hipHop" value="hipHop">Hip Hop</div>
-  		</section>
-  	</label>
+			</div>
 
-  	<div class="buttonHold">
-  		<button type="button" class="button">Filter</button>
+		</div>
 
-  	</div>
-
+	</div> <!-- End of view music -->
+	<div id="addMusic" hidden>
+		<section class="addMusic">
+			<div>
+				<label for="inputName">Song Name</label>
+				<input type="text" id="inputName">
+			</div>
+			<div>
+				<label for="inputArtist">Artist</label>
+				<input type="text" id="inputArtist">
+			</div>
+			<div>
+				<label for="inputAlbum">Album</label>
+				<input type="text" id="inputAlbum">
+			</div>
+			<div>
+				<button type="button" class="addButton">Add</button>
+			</div>
+		</section>
 	</div>
-	<div id="songList" class="songList">
-
-
-
-	</div>
-
-<script type="text/javascript" src="songs.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="songs.js"></script>
+	<script type="text/javascript" src="dom.js"></script>
 </body>
 </html>
