@@ -19,7 +19,7 @@
 	<div id="viewMusic">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-3 sideSection">
+				<div class="col-md-3 col-sm-3 sideSection">
 					<label for="length" class="labels">Song Length</label>
 					<input type="range" id="length" min="0.5" max="10" step="0.5" value="5">
 
@@ -30,16 +30,34 @@
 					<input name="album" list="albumName">
 
 					<label class="labels genre" for="">Genre</label>
-						<input type="checkbox" name="rock" value="rock">Rock
-						<input type="checkbox" name="pop" value="pop">Pop
-						<input type="checkbox" name="classical" value="classical">Classical
-						<input type="checkbox" name="jazz" value="jazz">Jazz
-						<input type="checkbox" name="blues" value="blues">Blues
-						<input type="checkbox" name="hipHop" value="hipHop">Hip Hop
-
-					<div><button type="button" class="button">Filter</button></div>
+						<div class="row">
+							<div class="col-md-6">
+								<div>
+									<input type="checkbox" name="rock" value="rock">Rock
+								</div>
+								<div>
+									<input type="checkbox" name="pop" value="pop">Pop
+								</div>
+								<div>
+									<input type="checkbox" name="classical" value="classical">Classical
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div>
+									<input type="checkbox" name="jazz" value="jazz">Jazz
+								</div>
+								<div>
+									<input type="checkbox" name="blues" value="blues">Blues
+								</div>
+								<div>
+									<input type="checkbox" name="hipHop" value="hipHop">Hip Hop
+								</div>
+							</div>
+						</div>
+					<div class="buttonDiv"><button type="button" class="button">Filter</button></div>
 				</div>
-				<div id="songList" class="songList col-md-9"></div>
+
+				<div id="songList" class="songList col-md-9 col-sm-9"></div>
 
 			</div>
 
