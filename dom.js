@@ -5,24 +5,44 @@ var addMusic = $("#addMusic"),
 		inputName = $("#inputName"),
 		inputArtist = $("#inputArtist"),
 		inputAlbum = $("#inputAlbum"),
-		addButton = $(".addButton");
+		addButton = $(".addButton"),
+		deleteBtn = $(".delete")
 
-addLink.click(function (event){
-	console.log(event);
-	viewMusic.hide();
-	addMusic.show();
-})
+function toggle () {
+	viewMusic.toggle();
+	addMusic.toggle();
+}
 
-viewLink.click(function() {
-	addMusic.hide();
-	viewMusic.show();
-})
+addLink.click(toggle);
+
+viewLink.click(toggle);
 
 addButton.click(function (){
-	var newSong = `${inputName.val()} - by ${inputArtist.val()} from the album ${inputAlbum.val()}`;
-	songs.push(newSong);
+	var newSong = {
+		title: inputName.val(),
+		artist: inputArtist.val(),
+		album: inputAlbum.val(),
+		genre: $("input:checkbox:checked").val(),
+		length: ""
+	}
+	songsArray.push(newSong);
 	domInput(newSong);
 	inputName.val("");
 	inputArtist.val("");
 	inputAlbum.val("");
+	toggle();
 })
+
+$("#songList").on("click", ".delete", function(event){
+	var songDlt =  $(event.target).closest("div");
+	var songTitle = songDlt.children().html();
+	songsArray.forEach( (song) => {
+		if (song.title === songTitle) {
+			var deleteIndex = songsArray.indexOf(song);
+			songsArray.splice(deleteIndex, 1);
+		}
+	});
+	songDlt.remove();
+
+})
+

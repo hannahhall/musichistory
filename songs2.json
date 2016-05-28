@@ -1,0 +1,32 @@
+{
+  "songs": [
+    {
+      "title": "Tumblin' Dice",
+      "artist": "Rolling Stones",
+      "album": "Exile on Main St",
+      "genre": "Pop",
+      "length": ""
+    },
+    {
+      "title": "Another Brick in the Wall",
+      "artist": "Pink Floyd",
+      "album": "The Wall",
+      "genre": "Rock",
+      "length": ""
+    },
+    {
+      "title": "When I'm 64",
+      "artist": "The Beatles",
+      "album": "Sgt Pepper's Lonely Hearts Club",
+      "genre": "Rock",
+      "length": ""
+    },
+    {
+      "title": "Gold On the Ceiling",
+      "artist": "The Black Keys",
+      "album": "El Camino",
+      "genre": "Rock",
+      "length": ""
+    }
+  ]
+}
