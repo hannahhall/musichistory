@@ -1,21 +1,18 @@
-var addMusic = $("#addMusic"),
-		viewMusic = $("#viewMusic"),
-		viewLink = $("#viewLink"),
+var	viewLink = $("#viewLink"),
 		addLink = $("#addLink"),
 		inputName = $("#inputName"),
 		inputArtist = $("#inputArtist"),
 		inputAlbum = $("#inputAlbum"),
 		addButton = $(".addButton"),
-		deleteBtn = $(".delete")
+		songsArray = 	MusicHistory.getSongsArray(),
+		deleteBtn = $(".delete"),
+		addMusic = $("#addMusic"),
+		viewMusic = $("#viewMusic"),
+		filterBtn = $(".filter");
 
-function toggle () {
-	viewMusic.toggle();
-	addMusic.toggle();
-}
-
-addLink.click(toggle);
-
-viewLink.click(toggle);
+addLink.click(MusicHistory.toggleHidden);
+filterBtn.click(MusicHistory.filter);
+viewLink.click(MusicHistory.toggleHidden);
 
 addButton.click(function (){
 	var newSong = {
@@ -26,11 +23,12 @@ addButton.click(function (){
 		length: ""
 	}
 	songsArray.push(newSong);
-	domInput(newSong);
+	MusicHistory.domInput(newSong);
+	$(".artistFilter").append(`<option value="${newSong.artist}">${newSong.artist}</option>`);
 	inputName.val("");
 	inputArtist.val("");
 	inputAlbum.val("");
-	toggle();
+	MusicHistory.toggleHidden();
 })
 
 $("#songList").on("click", ".delete", function(event){
@@ -43,6 +41,4 @@ $("#songList").on("click", ".delete", function(event){
 		}
 	});
 	songDlt.remove();
-
 })
-

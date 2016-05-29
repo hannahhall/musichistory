@@ -21,40 +21,44 @@
 			<div class="row">
 				<div class="col-md-3 col-sm-3 sideSection">
 					<label for="length" class="labels">Song Length</label>
-					<input type="range" id="length" min="0.5" max="10" step="0.5" value="5">
+					<input type="range" id="lengthFilter" min="0.5" max="10" step="0.5">
 
 					<label class="labels">Artist Name</label>
-					<input name="artist" list="artistName" class="artistName">
+					<select name="" class="artistFilter">
+						<option value="">Choose an artist</option>
+					</select>
 
 					<label for="albumName" class="labels">Album Name</label>
-					<input name="album" list="albumName">
+					<select name="" class="albumFilter">
+						<option value="">Choose an album</option>
+					</select>
 
 					<label class="labels genre" for="">Genre</label>
 						<div class="row">
 							<div class="col-sm-6">
 								<div>
-									<input type="checkbox" name="rock" value="rock">Rock
+									<input type="checkbox" name="rock" value="Rock">Rock
 								</div>
 								<div>
-									<input type="checkbox" name="pop" value="pop">Pop
+									<input type="checkbox" name="pop" value="Pop">Pop
 								</div>
 								<div>
-									<input type="checkbox" name="classical" value="classical">Classical
+									<input type="checkbox" name="classical" value="Classical">Classical
 								</div>
 							</div>
 							<div class="col-sm-6">
 								<div>
-									<input type="checkbox" name="jazz" value="jazz">Jazz
+									<input type="checkbox" name="jazz" value="Jazz">Jazz
 								</div>
 								<div>
-									<input type="checkbox" name="blues" value="blues">Blues
+									<input type="checkbox" name="blues" value="Blues">Blues
 								</div>
 								<div>
-									<input type="checkbox" name="hipHop" value="hipHop">Hip Hop
+									<input type="checkbox" name="hipHop" value="HipHop">Hip Hop
 								</div>
 							</div>
 						</div>
-					<div class="buttonDiv"><button type="button" class="button">Filter</button></div>
+					<div class="buttonDiv"><button type="button" class="button filter">Filter</button></div>
 				</div>
 				<div class='songList col-md-9 col-sm-9'>
 				<div id="songList"></div>
@@ -105,7 +109,8 @@
 	</div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="xhr.js"></script>
-	<script type="text/javascript" src="songs.js"></script>
+	<script type="text/javascript" src="toggle.js"></script>
+	<script type="text/javascript" src="filter.js"></script>
 	<script type="text/javascript" src="dom.js"></script>
 </body>
 </html>
