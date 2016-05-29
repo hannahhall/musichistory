@@ -31,7 +31,7 @@
 
 					<label class="labels genre" for="">Genre</label>
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-sm-6">
 								<div>
 									<input type="checkbox" name="rock" value="rock">Rock
 								</div>
@@ -42,7 +42,7 @@
 									<input type="checkbox" name="classical" value="classical">Classical
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-sm-6">
 								<div>
 									<input type="checkbox" name="jazz" value="jazz">Jazz
 								</div>
@@ -56,8 +56,10 @@
 						</div>
 					<div class="buttonDiv"><button type="button" class="button">Filter</button></div>
 				</div>
-
-				<div id="songList" class="songList col-md-9 col-sm-9"></div>
+				<div class='songList col-md-9 col-sm-9'>
+				<div id="songList"></div>
+				<div class="more buttonDiv"><button class="button showMore" type="button">More ></button></div>
+				</div>
 
 			</div>
 
@@ -79,11 +81,30 @@
 				<input type="text" id="inputAlbum">
 			</div>
 			<div>
+				<input type="checkbox" name="rock" value="rock">Rock
+			</div>
+			<div>
+				<input type="checkbox" name="pop" value="pop">Pop
+			</div>
+			<div>
+				<input type="checkbox" name="classical" value="classical">Classical
+			</div>
+			<div>
+				<input type="checkbox" name="jazz" value="jazz">Jazz
+			</div>
+			<div>
+				<input type="checkbox" name="blues" value="blues">Blues
+			</div>
+			<div>
+				<input type="checkbox" name="hipHop" value="hipHop">Hip Hop
+			</div>
+			<div>
 				<button type="button" class="addButton">Add</button>
 			</div>
 		</section>
 	</div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="xhr.js"></script>
 	<script type="text/javascript" src="songs.js"></script>
 	<script type="text/javascript" src="dom.js"></script>
 </body>
