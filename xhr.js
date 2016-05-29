@@ -1,4 +1,5 @@
 var MusicHistory = (function (music) {
+
 var songsArray = [];
 $.getJSON("songs.json").done(fetchSong);
 

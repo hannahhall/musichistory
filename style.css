@@ -4,6 +4,11 @@ body {
 	margin: 0 3em;
 }
 
+ul {
+	padding: 0;
+	margin: 0;
+}
+
 /*Header*/
 .topBar {
 	margin-bottom: 1em;
@@ -12,18 +17,13 @@ body {
 	border: 2px solid #080357;
 }
 
-.navBar ul {
-	margin: 0;
-	padding: 0;
-}
-
 .link {
 	padding: .5em 1em;
 	text-align: center;
 	text-decoration: underline;
 	display: inline-block;
 	font-size: 1em;
-	margin: 10px 10px 0;
+	/*margin: 10px 10px 0;*/
 }
 
 .link:nth-child(2) {
@@ -40,6 +40,8 @@ body {
 	border: 2px solid #080357;
 	background-color:  #4DD7FA;
 	color: black;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .labels {
@@ -77,7 +79,32 @@ body {
 
 .songList,
 .sideSection {
-	height: 500px;
+
+}
+
+.songInfo {
+	margin: 2em 1em;
+}
+
+.songInfo li {
+	width: 135px;
+	display: table-cell;
+	padding: 0 1em;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.songInfo li:nth-child(2) {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+.songTitle {
+	padding-left: .5em;
+	color: #785616;
+}
+
+.more {
+	text-align: right;
 }
 
 /*Add Music*/
