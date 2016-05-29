@@ -1,0 +1,84 @@
+body {
+  color: #080357;
+  margin: 0 3em; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+.topBar {
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: #FFB4B0;
+  border: 2px solid #080357; }
+
+.link {
+  padding: .5em 1em;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 1em; }
+  .link :nth-child(2) {
+    border-left: 2px solid #080357; }
+
+/*Side Bar */
+.sideSection {
+  border: 2px solid #080357;
+  background-color: #4DD7FA;
+  color: #080357;
+  display: table-cell;
+  vertical-align: middle; }
+
+.labels {
+  display: block;
+  margin: 1em 0;
+  padding-left: 0; }
+
+.buttonDiv {
+  text-align: center;
+  margin: 2em; }
+
+.button {
+  background-color: #fff;
+  border: 1px solid #080357;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  font-size: 1em;
+  margin: 0 auto; }
+
+.col-md-1 {
+  width: 1em; }
+
+.sideSection,
+.songList {
+  min-height: 550px; }
+
+.songList {
+  border: 2px solid #080357;
+  background-color: #FEFAC0;
+  float: right;
+  width: 73%; }
+
+.songInfo {
+  margin: 2em 1em; }
+  .songInfo li {
+    width: 135px;
+    display: table-cell;
+    padding: 0 1em;
+    text-align: center;
+    vertical-align: middle; }
+    .songInfo li :nth-child(2) {
+      border-left: 1px solid #080357;
+      border-right: 1px solid #080357; }
+
+.songTitle {
+  padding-left: .5em;
+  color: #785616; }
+
+.more {
+  text-align: right; }
+
+/*Add Music*/
+.addMusic {
+  margin: 5em 40%; }

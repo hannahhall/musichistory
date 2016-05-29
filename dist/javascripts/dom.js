@@ -21,7 +21,7 @@ addButton.click(function (){
 		album: inputAlbum.val(),
 		genre: $("input:checkbox:checked").val(),
 		length: ""
-	}
+	};
 	songsArray.push(newSong);
 	MusicHistory.domInput(newSong);
 	$(".artistFilter").append(`<option value="${newSong.artist}">${newSong.artist}</option>`);
@@ -29,7 +29,7 @@ addButton.click(function (){
 	inputArtist.val("");
 	inputAlbum.val("");
 	MusicHistory.toggleHidden();
-})
+});
 
 $("#songList").on("click", ".delete", function(event){
 	var songDlt =  $(event.target).closest("div");
@@ -41,4 +41,4 @@ $("#songList").on("click", ".delete", function(event){
 		}
 	});
 	songDlt.remove();
-})
+});
