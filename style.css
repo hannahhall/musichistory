@@ -69,17 +69,17 @@ ul {
 	width: 1em;
 }
 
+.sideSection,
+.songList {
+	min-height: 550px;
+}
+
 /*Song List*/
 .songList {
 	border: 2px solid #080357;
 	background-color: #FEFAC0;
 	float: right;
 	width: 73%;
-}
-
-.songList,
-.sideSection {
-
 }
 
 .songInfo {
@@ -111,68 +111,3 @@ ul {
 .addMusic {
 	margin: 5em 40%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
