@@ -1,12 +1,12 @@
 var MusicHistory = (function (music) {
 	var filterBtn = $(".filter"),
-		genre = $("input:checkbox:checked").val();
+		genre = $("input:checkbox:checked").val(),
 		album = $(".albumFilter"),
 		artist = $(".artistFilter"),
 		length = $('#lengthFilter'),
 		songsArray = [];
 
-	$.getJSON("songs.json").done(fetchSong);
+	$.getJSON("javascripts/songs.json").done(fetchSong);
 
 	function fetchSong (Data) {
 		var jsonSongs = Data.songs;
@@ -18,30 +18,30 @@ var MusicHistory = (function (music) {
 	}
 
 	music.domInput = function (songInfo) {
-		var songInfo = `<div class="songInfo"><h3 class="songTitle">${songInfo.title}</h3>
+		var songInput = `<div class="songInfo"><h3 class="songTitle">${songInfo.title}</h3>
 			<ul>
 				<li>${songInfo.artist}</li><li>${songInfo.album}</li><li>${songInfo.genre}</li>
 				<li><button class="btn btn-danger delete">Delete</button></li>
 			</ul>
 		</div>`;
-		$("#songList").append(songInfo);
-	}
+		$("#songList").append(songInput);
+	};
 
 	function addInfo () {
 		songsArray.forEach ((song) =>{
 			var artistInfo = `<option value="${song.artist}">${song.artist}</option>`;
 			artist.append(artistInfo);
-		})
+		});
 	}
 
 	music.getSongsArray = function () {
 		return songsArray;
-	}
+	};
 
 	$(".showMore").click(() => {
-		$.getJSON("songs2.json").done(fetchSong);
-	})
+		$.getJSON("javascripts/songs2.json").done(fetchSong);
+	});
 
-	return music
+	return music;
 
-})(MusicHistory || {})
+})(MusicHistory || {});

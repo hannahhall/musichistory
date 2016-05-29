@@ -5,7 +5,7 @@ var MusicHistory = (function(toggle) {
 	toggle.toggleHidden = function () {
 		viewMusic.toggle();
 		addMusic.toggle();
-	}
+	};
 
 	return toggle;
-})(MusicHistory || {})
+})(MusicHistory || {});
