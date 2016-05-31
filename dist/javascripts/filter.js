@@ -1,3 +1,4 @@
+"use strict";
 var MusicHistory = (function(filters){
 	var filterBtn = $(".filter"),
 			album = $(".albumFilter"),

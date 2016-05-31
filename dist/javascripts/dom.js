@@ -1,3 +1,5 @@
+"use strict";
+const url = 'https://musichistory-da08d.firebaseio.com/songs';
 var	viewLink = $("#viewLink"),
 		addLink = $("#addLink"),
 		inputName = $("#inputName"),
@@ -22,23 +24,17 @@ addButton.click(function (){
 		genre: $("input:checkbox:checked").val(),
 		length: ""
 	};
-	songsArray.push(newSong);
-	MusicHistory.domInput(newSong);
+	$.post(`${url}.json`, JSON.stringify(newSong)).done(() => {location.reload();});
 	$(".artistFilter").append(`<option value="${newSong.artist}">${newSong.artist}</option>`);
-	inputName.val("");
-	inputArtist.val("");
-	inputAlbum.val("");
-	MusicHistory.toggleHidden();
 });
 
 $("#songList").on("click", ".delete", function(event){
 	var songDlt =  $(event.target).closest("div");
-	var songTitle = songDlt.children().html();
-	songsArray.forEach( (song) => {
-		if (song.title === songTitle) {
-			var deleteIndex = songsArray.indexOf(song);
-			songsArray.splice(deleteIndex, 1);
-		}
+	var taskId = songDlt.data('id');
+	$.ajax({
+		url: `${url}/${taskId}.json`,
+		method: 'DELETE'
+	}).done(() => {
+		songDlt.remove();
 	});
-	songDlt.remove();
 });
