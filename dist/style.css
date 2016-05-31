@@ -18,8 +18,9 @@ ul {
   text-decoration: underline;
   display: inline-block;
   font-size: 1em; }
-  .link :nth-child(2) {
-    border-left: 2px solid #080357; }
+
+.link:nth-child(2) {
+  border-left: 2px solid #080357; }
 
 /*Side Bar */
 .sideSection {
@@ -62,15 +63,15 @@ ul {
 
 .songInfo {
   margin: 2em 1em; }
+  .songInfo li:nth-child(2) {
+    border-left: 1px solid #080357;
+    border-right: 1px solid #080357; }
   .songInfo li {
     width: 135px;
     display: table-cell;
     padding: 0 1em;
     text-align: center;
     vertical-align: middle; }
-    .songInfo li :nth-child(2) {
-      border-left: 1px solid #080357;
-      border-right: 1px solid #080357; }
 
 .songTitle {
   padding-left: .5em;

@@ -1,3 +1,4 @@
+"use strict";
 var MusicHistory = (function(toggle) {
 	var addMusic = $("#addMusic"),
 			viewMusic = $("#viewMusic");

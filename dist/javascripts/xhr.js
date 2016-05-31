@@ -1,24 +1,25 @@
+"use strict";
 var MusicHistory = (function (music) {
+	const url = 'https://musichistory-da08d.firebaseio.com/songs';
 	var filterBtn = $(".filter"),
-		genre = $("input:checkbox:checked").val(),
-		album = $(".albumFilter"),
-		artist = $(".artistFilter"),
-		length = $('#lengthFilter'),
-		songsArray = [];
+			genre = $("input:checkbox:checked").val(),
+			album = $(".albumFilter"),
+			artist = $(".artistFilter"),
+			length = $('#lengthFilter'),
+			songsArray = [];
 
-	$.getJSON("javascripts/songs.json").done(fetchSong);
-
-	function fetchSong (Data) {
-		var jsonSongs = Data.songs;
-		$.each(jsonSongs, (song) => {
-			songsArray.push(jsonSongs[song]);
-			music.domInput(jsonSongs[song]);
+	$.get(`${url}.json`)
+		.done((data) => {
+			if (data) {
+				Object.keys(data).forEach((id) => {
+					music.domInput(data[id], id);
+					addInfo(data[id]);
+				});
+			}
 		});
-		addInfo();
-	}
 
-	music.domInput = function (songInfo) {
-		var songInput = `<div class="songInfo"><h3 class="songTitle">${songInfo.title}</h3>
+	music.domInput = function (songInfo, id) {
+		var songInput = `<div class="songInfo list-item" data-id="${id}"><h3 class="songTitle">${songInfo.title}</h3>
 			<ul>
 				<li>${songInfo.artist}</li><li>${songInfo.album}</li><li>${songInfo.genre}</li>
 				<li><button class="btn btn-danger delete">Delete</button></li>
@@ -27,20 +28,15 @@ var MusicHistory = (function (music) {
 		$("#songList").append(songInput);
 	};
 
-	function addInfo () {
-		songsArray.forEach ((song) =>{
-			var artistInfo = `<option value="${song.artist}">${song.artist}</option>`;
-			artist.append(artistInfo);
-		});
+	function addInfo (song) {
+		//some sort of if statement to check if the artist has already been added????
+		var artistInfo = `<option value="${song.artist}">${song.artist}</option>`;
+		artist.append(artistInfo);
 	}
 
 	music.getSongsArray = function () {
 		return songsArray;
 	};
-
-	$(".showMore").click(() => {
-		$.getJSON("javascripts/songs2.json").done(fetchSong);
-	});
 
 	return music;
 
